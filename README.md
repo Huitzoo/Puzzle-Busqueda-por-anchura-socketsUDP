@@ -2,10 +2,12 @@
 Implementación del algoritmo de búsqueda por anchura en una aplicación distribuida. 
 
 Compilar:
+
     Cliente:  make -f makefileC
     Servidor: make -f makefileS
 
 Ejecutar
+
     Para el cliente: 
 
     ./cliente a b c d e f....
