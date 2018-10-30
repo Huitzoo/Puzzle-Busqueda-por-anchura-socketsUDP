@@ -1,0 +1,21 @@
+servidor: servidor.cpp Respuesta.o SocketDatagrama.o funciones.o Tablero.o Ficha.o Coordenada.o
+	g++ servidor.cpp Respuesta.o SocketDatagrama.o funciones.o Tablero.o Ficha.o Coordenada.o -o servidor
+
+Respuesta.o: Respuesta.cpp SocketDatagrama.o Respuesta.h 
+	g++ Respuesta.cpp -c
+
+SocketDatagrama.o: SocketDatagrama.cpp funciones.o SocketDatagrama.h
+	g++ SocketDatagrama.cpp -c
+
+funciones.o: funciones.cpp Tablero.o funciones.h
+	g++ funciones.cpp -c 
+
+Tablero.o: Tablero.cpp Tablero.h
+	g++ Tablero.cpp -c
+
+Ficha.o: Ficha.cpp Ficha.h
+	g++ Ficha.cpp -c
+
+Coordenada.o: Coordenada.cpp Coordenada.h
+	g++ Coordenada.cpp -c
+
